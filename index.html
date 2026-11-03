@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Dinner Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="input-page">
+  <header class="app-header">
+    <h1>🍽️ Dinner Board</h1>
+    <a href="display.html" class="nav-btn">📺 Display view →</a>
+  </header>
+
+  <main>
+    <!-- SECTION 1: TODAY -->
+    <section class="section">
+      <h2 class="section-title">Today <span id="todayLabel" class="muted"></span></h2>
+      <div id="todayList" class="today-list"></div>
+    </section>
+
+    <!-- SECTION 2: THIS WEEK -->
+    <section class="section">
+      <h2 class="section-title">This Week <span id="thisWeekLabel" class="muted"></span></h2>
+      <div id="thisWeekGrid"></div>
+    </section>
+
+    <!-- SECTION 3: NEXT WEEK -->
+    <section class="section">
+      <details>
+        <summary class="section-title">Next Week <span id="nextWeekLabel" class="muted"></span></summary>
+        <div id="nextWeekGrid" style="margin-top:12px;"></div>
+      </details>
+    </section>
+
+    <!-- SECTION 4: RECURRING RULES -->
+    <section class="section">
+      <h2 class="section-title">Recurring Dinner Rules</h2>
+      <p class="hint">Everyone defaults to on time. Rules auto-apply to future weeks; you can still override a single day.</p>
+      <div id="rulesList" class="rules-list"></div>
+
+      <div class="rule-form">
+        <select id="ruleMember"></select>
+        <select id="ruleType">
+          <option value="weekly">Every…</option>
+          <option value="monthly">1st/2nd/3rd/4th… of month</option>
+        </select>
+        <select id="ruleDay"></select>
+        <select id="ruleNth" style="display:none;">
+          <option value="1">1st</option><option value="2">2nd</option>
+          <option value="3">3rd</option><option value="4">4th</option>
+        </select>
+        <select id="ruleStatus">
+          <option value="0">Not coming</option>
+          <option value="1">On time</option>
+          <option value="2">Early dinner</option>
+          <option value="3">Late dinner</option>
+        </select>
+        <button id="addRuleBtn">+ Add rule</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

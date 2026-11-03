@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Dinner Board — Display</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="display-page">
+  <header class="app-header">
+    <h1>🍽️ Dinner</h1>
+    <a href="index.html" class="nav-btn">✏️ Edit →</a>
+  </header>
+
+  <main>
+    <!-- TODAY (big) -->
+    <section class="section">
+      <h2 class="display-section-title">Today <span id="displayTodayLabel" class="muted"></span></h2>
+      <div id="displayToday" class="display-today"></div>
+    </section>
+
+    <!-- REST OF WEEK -->
+    <section class="section">
+      <h2 class="display-section-title">Rest of Week</h2>
+      <div id="displayWeek" class="display-week"></div>
+    </section>
+
+    <p class="last-updated" id="lastUpdated"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
